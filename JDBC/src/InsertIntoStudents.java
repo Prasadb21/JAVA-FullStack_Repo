@@ -18,16 +18,16 @@ public class InsertIntoStudents {
             PreparedStatement preparedStatement = connection.prepareStatement(insertQuery);
 
             // first insert
-            preparedStatement.setString(1 , "Gappi1");
+            preparedStatement.setString(1 , "Yoguuu");
             preparedStatement.setInt(2 , 23);
             preparedStatement.setString(3 , "DSA");
 
             preparedStatement.executeUpdate();
 
             // second insert
-            preparedStatement.setString(1,"xyz2");
-            preparedStatement.setInt(2,35);
-            preparedStatement.setString(3,"JFS");
+            preparedStatement.setString(1,"Dhabbu");
+            preparedStatement.setInt(2,22);
+            preparedStatement.setString(3,"DSA");
 
             preparedStatement.executeUpdate();
 

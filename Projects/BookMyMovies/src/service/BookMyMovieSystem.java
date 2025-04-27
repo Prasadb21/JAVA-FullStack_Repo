@@ -101,7 +101,7 @@ public class BookMyMovieSystem {
                 if(resultSet.next() && resultSet.getBoolean("is_booked"))
                 {
                     alreadyBookedSeat = true;
-                    System.out.println("seat" + seat + " is already booked. Choose another seat !!");
+                    System.out.println("seat " + seat + " is already booked. Choose another seat !!");
                 }
             }
 

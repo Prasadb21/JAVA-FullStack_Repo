@@ -26,7 +26,8 @@ public class BookMyMovieApp {
         System.out.println("Enter show ID and Number of seats");
         int showID = sc.nextInt();
 
-        List<String> selectedSeats = Arrays.asList("A3" , "A4");
+
+        List<String> selectedSeats = Arrays.asList("B3" , "B4");
         bookMyMovieSystem.bookTickets(1,showID,selectedSeats);
 
 

@@ -8,7 +8,7 @@ public class createNewDatabase {
         String username = "root";
         String password = "Prasad@21";
 
-        String createTable = "create table employee2 (\n" +
+        String createTable = "create table employee3 (\n" +
                 "\tid int PRIMARY KEY auto_increment,\n" +
                 "\temp_name varchar(50) not null,\n" +
                 "\tage int not null,\n" +
