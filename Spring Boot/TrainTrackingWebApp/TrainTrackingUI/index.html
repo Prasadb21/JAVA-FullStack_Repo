@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Route Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-train"></i> Train Route Finder</h1>
+            <p>Find the perfect train for your journey</p>
+        </header>
+
+        <div class="search-container">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="code-search">Search by Code</button>
+                <button class="tab-btn" data-tab="name-search">Search by Name</button>
+            </div>
+
+            <div class="tab-content active" id="code-search">
+                <form id="code-search-form">
+                    <div class="form-group">
+                        <label for="source-code">Source Station Code</label>
+                        <input type="text" id="source-code" placeholder="e.g., PUNE" required>
+                    </div>
+
+                    <div class="swap-btn">
+                        <button type="button" id="swap-code"><i class="fas fa-exchange-alt"></i></button>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination-code">Destination Station Code</label>
+                        <input type="text" id="destination-code" placeholder="e.g., CSTM" required>
+                    </div>
+
+                    <button type="submit" class="search-btn">Find Trains</button>
+                </form>
+            </div>
+
+            <div class="tab-content" id="name-search">
+                <form id="name-search-form">
+                    <div class="form-group">
+                        <label for="source-name">Source Station Name</label>
+                        <input type="text" id="source-name" placeholder="e.g., Pune Junction" required>
+                        <div class="station-suggestions" id="source-suggestions"></div>
+                    </div>
+
+                    <div class="swap-btn">
+                        <button type="button" id="swap-name"><i class="fas fa-exchange-alt"></i></button>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination-name">Destination Station Name</label>
+                        <input type="text" id="destination-name" placeholder="e.g., Mumbai CST" required>
+                        <div class="station-suggestions" id="destination-suggestions"></div>
+                    </div>
+
+                    <button type="submit" class="search-btn">Find Trains</button>
+                </form>
+            </div>
+
+            <div class="date-filters">
+                <div class="form-group">
+                    <label for="travel-date">Travel Date</label>
+                    <input type="date" id="travel-date">
+                </div>
+            </div>
+        </div>
+
+        <div class="results-container" id="results-container">
+            <div class="loading-spinner hidden" id="loading-spinner">
+                <i class="fas fa-circle-notch fa-spin"></i>
+                <p>Searching for trains...</p>
+            </div>
+
+            <div class="results-header hidden" id="results-header">
+                <h2>Available Trains</h2>
+                <div class="journey-details" id="journey-details"></div>
+            </div>
+
+            <div class="filters hidden" id="filters">
+                <button id="sort-time" class="filter-btn"><i class="fas fa-clock"></i> Sort by Time</button>
+                <button id="sort-duration" class="filter-btn"><i class="fas fa-hourglass-half"></i> Sort by Duration</button>
+                <button id="filter-express" class="filter-btn"><i class="fas fa-bolt"></i> Express Trains</button>
+            </div>
+
+            <div class="train-results" id="train-results"></div>
+
+            <div class="no-results hidden" id="no-results">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>No trains found for this route. Please try different stations.</p>
+            </div>
+        </div>
+
+        <div class="saved-routes">
+            <h3>Recent Searches</h3>
+            <div class="recent-searches" id="recent-searches">
+                <!-- Recent searches will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Train Route Finder | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
