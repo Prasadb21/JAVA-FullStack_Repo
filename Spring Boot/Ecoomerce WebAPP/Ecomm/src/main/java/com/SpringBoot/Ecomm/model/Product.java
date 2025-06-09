@@ -20,14 +20,11 @@ public class Product {
     private Long id;
 
     private String name;
-
     private String description;
 
-    private double ProductPrice;
-
-    private String ProductImageUrl;
-
-    private String Category;
+    private double productPrice;         // ✅ changed
+    private String productImageUrl;      // ✅ changed
+    private String category;             // ✅ changed
 
 
 
