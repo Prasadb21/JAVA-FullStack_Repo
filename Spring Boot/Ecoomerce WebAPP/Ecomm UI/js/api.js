@@ -22,7 +22,7 @@ async function loadProducts() {
 
     products.forEach((product) => {
       let productCard = `
-  <div class="col-lg-4 col-md-6 mb-4">
+  <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
     <div class="card h-100">
       <img src="${product.productImageUrl}" class="card-img-top" alt="${product.name}">
       <div class="card-body d-flex flex-column">
