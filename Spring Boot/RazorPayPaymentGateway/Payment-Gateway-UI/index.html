@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CloudPro 1.0 Checkout</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="payment-section">
+        <h1>Payment Information</h1>
+
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="John Doe" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="example@mail.com" />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <div class="phone-input">
+            <div class="flag">
+              <img src="image.png" alt="IN" />
+              <span>+91</span>
+            </div>
+            <input type="tel" id="phone" placeholder="1234567890" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="coupon">Promo Code</label>
+          <div class="coupon-container">
+            <input type="text" id="coupon" value="CLOUDSTART" />
+            <span class="clear-coupon"><i class="fas fa-times"></i></span>
+          </div>
+          <div class="success-message">
+            <i class="fas fa-check-circle"></i> Promo code applied
+          </div>
+        </div>
+
+        <div class="price-card">
+          <div class="price-row">
+            <span>Original Price</span>
+            <span>₹7,499.00</span>
+          </div>
+          <div class="price-row">
+            <span>Discount</span>
+            <span class="negative-amount">-₹3,499.00</span>
+          </div>
+          <div class="price-row total-row">
+            <span>Total</span>
+            <span>₹4,000.00</span>
+          </div>
+        </div>
+
+        <button class="pay-button">
+          <i class="fas fa-lock"></i> Pay ₹4,000
+        </button>
+        <div class="payment-methods">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-amex"></i>
+          <i class="fab fa-google-pay"></i>
+          <i class="fab fa-apple-pay"></i>
+        </div>
+        <div class="secure-text">
+          <i class="fas fa-shield-alt"></i> Secured by Razorpay
+        </div>
+      </div>
+
+      <div class="course-section">
+        <h1 class="course-title">
+          CloudPro 1.0 : Complete Azure Cloud Engineer Bootcamp
+        </h1>
+
+        <div class="course-banner">
+          <img src="banner.png" alt="Course Banner" />
+
+          <div class="live-badge">LIVE</div>
+        </div>
+
+        <div class="course-description">
+          Become an expert in Microsoft Azure Cloud with this 3-month intensive
+          training program that covers infrastructure, DevOps automation, and
+          deployment best practices.
+        </div>
+
+        <div class="instructor-info">
+          <i class="fas fa-user-tie"></i> Led by Cloud Professionals from Top
+          Tech Companies
+        </div>
+
+        <div class="course-highlights">
+          <div class="highlight-item">
+            <i class="fas fa-calendar-alt"></i>
+            <div>
+              <strong>Duration</strong>
+              <span>3 months</span>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <strong>Live Hours</strong>
+              <span>100+</span>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <i class="fas fa-users"></i>
+            <div>
+              <strong>Batch Size</strong>
+              <span>Small Cohorts</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-features">
+          <h3>Program Highlights:</h3>
+          <div class="feature-item">
+            <span class="feature-check"><i class="fas fa-check"></i></span>
+            <span>Hands-on Azure Labs</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-check"><i class="fas fa-check"></i></span>
+            <span>Real-world Cloud Projects</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-check"><i class="fas fa-check"></i></span>
+            <span>Live Doubt-Solving Support</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-check"><i class="fas fa-check"></i></span>
+            <span>Access to Session Recordings</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-check"><i class="fas fa-check"></i></span>
+            <span>Mock Interviews & Career Guidance</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-check"><i class="fas fa-check"></i></span>
+            <span>Azure Certification Assistance</span>
+          </div>
+
+          <div class="show-more">
+            <span id="show-more-text">Show more</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
